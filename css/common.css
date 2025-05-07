@@ -1,0 +1,1453 @@
+@charset "utf-8";
+
+/* ******************************************************************
+
+	--common.css--
+
+	0. BoxModel change
+
+	1. Common setting
+		1-1. Reset styles
+		1-2. BoxModel styles
+		1-3. Text styles
+		1-4. Heading styles
+		1-5. Button styles
+		1-6. pagination styles
+		1-7. Table styles
+		1-8. Form styles
+		1-9. Scrollbar styles
+		1-99. VisualFormattingModel styles
+
+	2. Responsive setting
+		2-1. Fluid columns
+
+	99. SP
+
+****************************************************************** */
+
+/*==================================================================
+	0. BoxModel change
+===================================================================*/
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*==================================================================
+	1. Common setting
+===================================================================*/
+/* ------------------------------------------------------------------
+	1-1. Reset styles
+-------------------------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+fieldset {
+	border: 0;
+}
+img {
+	border-style: none;
+	vertical-align: top;
+	height: auto;
+}
+ol,ul {
+	list-style: none;
+}
+caption {
+	text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+table {
+	width: 100%;
+}
+
+.grecaptcha-badge { visibility: hidden; }
+
+/* ------------------------------------------------------------------
+	1-2. BoxModel styles
+-------------------------------------------------------------------*/
+.pt_00 { padding-top: 0 !important;}
+.pt_10 { padding-top: 10px !important;}
+.pt_20 { padding-top: 20px !important;}
+.pt_30 { padding-top: 30px !important;}
+.pt_40 { padding-top: 40px !important;}
+.pt_50 { padding-top: 50px !important;}
+.pb_00 { padding-bottom: 0 !important;}
+.pb_10 { padding-bottom: 10px !important;}
+.pb_20 { padding-bottom: 20px !important;}
+.pb_30 { padding-bottom: 30px !important;}
+.pb_40 { padding-bottom: 40px !important;}
+.pb_50 { padding-bottom: 50px !important;}
+.pb_60 { padding-bottom: 60px !important;}
+.mt_00 { margin-top: 0 !important;}
+.mt_10 { margin-top: 10px !important;}
+.mt_20 { margin-top: 20px !important;}
+.mt_30 { margin-top: 30px !important;}
+.mt_40 { margin-top: 40px !important;}
+.mt_50 { margin-top: 50px !important;}
+.mb_00 { margin-bottom: 0 !important;}
+.mb_10 { margin-bottom: 10px !important;}
+.mb_20 { margin-bottom: 20px !important;}
+.mb_30 { margin-bottom: 30px !important;}
+.mb_40 { margin-bottom: 40px !important;}
+.mb_50 { margin-bottom: 50px !important;}
+.mb_60 { margin-bottom: 60px !important;}
+
+/* ------------------------------------------------------------------
+	1-3. Text styles
+-------------------------------------------------------------------*/
+.f12 { font-size: 12px;}
+.f14 { font-size: 14px;}
+.f16 { font-size: 16px;}
+.f18 { font-size: 18px;}
+.f20 { font-size: 20px;}
+.f24 { font-size: 24px;}
+.f30 { font-size: 30px;}
+.f40 { font-size: 40px;}
+.f50 { font-size: 50px;}
+
+.lh10 { line-height: 1;}
+.lh12 { line-height: 1.2;}
+.lh14 { line-height: 1.4;}
+.lh16 { line-height: 1.6;}
+.lh18 { line-height: 1.8;}
+.lh20 { line-height: 2;}
+.lh22 { line-height: 2.2;}
+
+
+.f_color_base { color: #333;}/* MAIN_COLOR */
+.f_color_gray { color: #888888;}
+.f_color_naby { color: #121d54;}
+.f_color_blue { color: #0208fb;}
+.f_color_white{ color: #fff!important;}
+.f_color_red{ color: #ff0000;}
+
+@media only screen and (max-width: 640px) {
+
+	.f12 { font-size: 1.875vw;}
+	.f14 { font-size: 2.1875vw;}
+	.f16 { font-size: 2.5vw;}
+	.f18 { font-size: 2.8125vw;}
+	.f20 { font-size: 3.125vw;}
+	.f24 { font-size: 3.75vw;}
+	.f30 { font-size: 4.6875vw;}
+	.f40 { font-size: 6.25vw;}
+	.f50 { font-size: 7.8125vw;}
+
+	.lh10 { line-height: 1;}
+	.lh12 { line-height: 1.2;}
+	.lh14 { line-height: 1.4;}
+	.lh16 { line-height: 1.6;}
+	.lh18 { line-height: 1.8;}
+	.lh20 { line-height: 1.8;}
+	.lh22 { line-height: 1.8;}
+
+}
+/* ------------------------------------------------------------------
+	1-4. Heading styles
+-------------------------------------------------------------------*/
+.heading{
+	font-size: 24px;
+	margin-bottom: 30px;
+	color: #031985;
+	font-weight: bold;
+}
+.heading01{
+	color: #031985;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.1;
+	padding-left: 12px;
+	border-left: solid 5px #333;
+	margin-bottom: 30px;
+}
+.heading01 span{
+	font-size: 30px;
+}
+
+.heading01_sub{
+	color: #031985;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+.heading03{
+	border-bottom: solid 2px #0208fb;
+	padding-bottom: 14px;
+	margin-bottom: 30px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #031985;
+}
+
+.heading04{
+	border-left: solid 12px #0208fb;
+	font-size: 20px;
+	color: #031985;
+	padding-left: 12px;
+	margin-bottom: 30px;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+/* 番号つきheading */
+.heading04_type02{
+	font-size: 16px;
+	font-weight: bold;
+}
+.heading04_type02 .heading04_type02_num{
+	display: inline-block;
+	vertical-align: middle;
+	background: #121d54;
+	color: #fff;
+	padding: 12px;
+}
+.heading04_type02 p{
+	display: inline-block;
+	vertical-align: middle;
+	color: #121d54;
+	padding-left: 5px;
+}
+
+
+
+
+
+.border_color01{
+	border-color: #e4007f;
+}
+.border_color02{
+	border-color: #ff0;
+}
+.border_color03{
+	border-color: #00ff2a;
+}
+.border_color04{
+	border-color: #0208fb;
+}
+.border_color05{
+	border-color: #8d05d5;
+}
+
+/* ------------------------------------------------------------------
+	1-5. Button styles
+-------------------------------------------------------------------*/
+/* ここから下がボタンのCSS　*/
+.btn_gradation {
+  display: inline-block;
+	line-height: 1.4;
+  width: 288px;
+  text-align: center;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 28px 12px 12px;/* 240116修正 */
+	border: solid 1px #010931;
+  background-image: linear-gradient(-90deg, #0b03c7, #010931);
+  transition: .5s;
+}
+
+.btn_gradation:hover {
+  background-position: right center;
+	background: #fff;
+	color: #0a03bd;
+	border: solid 1px #0a03bd;
+}
+/* btn_gradation_02 */
+.btn_gradation_02 {
+  display: inline-block;
+	line-height: 1.4;
+  width: 288px;
+  text-align: center;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 28px 12px 12px;/* 240116修正 */
+	border: solid 1px #fff;
+	background: #010930;
+  transition: .5s;
+}
+
+.btn_gradation_02:hover {
+  background-position: right center;
+	background: #fff;
+	color: #0a03bd;
+	border: solid 1px #010930;
+}
+/* btn_gradation_02 ここまで */
+
+/* btn_gradation_03 ここから*/
+.btn_gradation_03 {
+  display: inline-block;
+	line-height: 1.4;
+  width: 288px;
+  text-align: center;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 28px 12px 12px;/* 240116修正 */
+	border: solid 1px #010931;
+  background-image: linear-gradient(-90deg, #0b03c7, #010931);
+  transition: .5s;
+}
+
+.btn_gradation_03:hover {
+  background-position: right center;
+	background: rgba(51,153,255,0);
+	color: #0a03bd;
+	border: solid 1px #010930;
+}
+/* btn_gradation_03 ここまで*/
+
+input.btn_gradation {
+    padding: 12px 0;
+}
+
+.arrow {
+	position: relative;
+}
+.arrow::after {
+	position: absolute;
+	top: 50%;
+	right: .2em;
+	content: '';
+	margin-top: -6px;
+	margin-right: 6px;
+	width: 16px;
+	height: 6px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: skew(45deg);
+}
+.arrow:hover::after {
+	border-bottom: 1px solid #0a03bd;
+	border-right: 1px solid #0a03bd;
+}
+.cursor {
+	cursor: pointer;
+}
+
+
+.hover_btn_wrap .hover_btn{
+	text-align: center;
+}
+
+.hover_btn_wrap .hover_btn_link{
+	margin: 0 auto;
+}
+.hover_btn_list{
+	padding-bottom: 20px;
+}
+.hover_btn{
+	margin: 10px 0;
+}
+.hover_btn_link{
+	display: block;
+	text-decoration: none;
+}
+
+/* 240116_追加ここから */
+.btn_gradation_flex {
+	width: auto;
+}
+/* 240116_追加ここまで */
+
+
+/* .link_button */
+.link_button_list .link_button{
+	margin: 20px 0;
+}
+.link_button {
+	display: inline-block;
+	vertical-align: top;
+}
+.link_button a {
+	display: block;
+	text-decoration: none;
+}
+
+/* 角丸ベーシックタイプ */
+.link_button_01 {
+	background: #121d54;
+	border: solid 2px #121d54;
+	border-radius: 5px;
+	font-size: 12px;
+}
+.link_button_01 .tel_fs{
+	font-size: 24px;
+	font-weight: bold;
+}
+.link_button_01 .mail_fs{
+	font-size: 20px;
+	font-weight: bold;
+}
+.link_button_01 a{
+	width: 290px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #FFF;
+	position: relative;
+	transition: all 0.5s;
+	line-height: 1.2;
+}
+
+.link_button_01_tel{
+	padding: 28px 10px 28px 66px;
+}
+.link_button_01_mail{
+	padding: 37px 10px 37px 70px;
+}
+
+.link_button_01_tel:before {
+	font-family: FontAwesome;
+	content: "\f098";
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	right: auto;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-weight: normal;
+	font-size: 48px;
+}
+.link_button_01_mail:before {
+	font-family: FontAwesome;
+	content:"\f0e0";
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	right: auto;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-weight: normal;
+	font-size: 38px;
+}
+.link_button_01 a:hover {
+	background: #FFF;
+	color: #121d54;
+}
+
+
+
+/* ------------------------------------------------------------------
+	1-6. pagination styles
+-------------------------------------------------------------------*/
+
+/*wp-pagenavi base*/
+.wp-pagenavi {
+	width: 760px;
+	margin: 0 auto;
+	clear: both;
+	text-align:center;
+	margin-bottom: 30px;
+	font-size: 0;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	display: inline-block;
+	width: 50px;
+	color: #fff;
+	background-color: #bfbfbf;
+	padding: 14px 0;
+	margin: 0 7px;
+	white-space: nowrap;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration:none;
+	font-size: 16px;
+}
+.wp-pagenavi .pages{
+	display: none
+}
+.wp-pagenavi a:hover{
+    color:#FFF;
+    background-color: #121d54;
+    }
+.wp-pagenavi span.current{
+	color: #FFF;
+	background-color: #121d54;
+	font-weight: bold;
+}
+
+
+/* ------------------------------------------------------------------
+	1-7. Table styles
+-------------------------------------------------------------------*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,td {
+	border-bottom: 1px solid #bfbfbf;
+	padding: 20px 30px;
+	vertical-align: top;
+}
+.category_box {
+	margin-bottom: 30px;
+	width: 50%;
+}
+.form_wrapper {
+	width: 1200px;
+  margin: 0 auto;
+}
+
+.th_col2 {
+	width: 50%;
+}
+.th_col3 {
+	width: 33.3%;
+}
+.th_col4 {
+	width: 25%;
+}
+.th_col5 {
+	width: 20%;
+}
+.th_col6 {
+	width: 16.7%;
+}
+.th_col7 {
+	width: 14.3%;
+}
+.th_col8 {
+	width: 12.5%;
+}
+.th_col9 {
+	width: 11.1%;
+}
+.th_col10 {
+	width: 10%;
+}
+
+}
+.table_01 { }
+.table_01 th,
+.table_01 td {
+	border-top: 1px solid #bfbfbf;
+	padding: 15px;
+}
+.table_02 th,
+.table_02 td  {
+	border-bottom: 1px solid #e8e8e8;
+}
+
+/* 破線のtd */
+.table_01 .td_type_01{
+	border-style: dashed solid dashed solid;
+	border-width: 1px;
+	border-color: #c9c9c9 #313131 #c9c9c9 #313131;
+}
+
+/* 背景色変更 */
+.th_col_bg{	background: #eeeeee;}
+/* テーブルタイトルの別スタイル */
+.th_col_title{
+	border-left: 8px solid #0208fb;
+	padding-left: 10px;
+}
+
+
+/* ------------------------------------------------------------------
+	1-8. Form styles
+-------------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	font-family: inherit;
+	font-size: 16px;
+	line-height: 1.4;
+	vertical-align: middle;
+	/*
+	background: none;
+	border: none;
+	border-radius: 0;
+	*/
+}
+select::-ms-expand {
+	display: none;
+}
+/*textarea { font-size: inherit;}*/
+input[type="submit"]{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* background: none;
+	border: none; */
+	border-radius: 0;
+	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+	/*border: 1px solid #b70149;*/
+	transition: all 0.5s;
+	/*box-shadow: 0 0 1px 1px rgba(0,160,233,1);*/
+}
+
+/*-------------------------------*/
+/*	オートフィル時の背景色を無効に
+/*-------------------------------*/
+input:-webkit-autofill {
+	/* 色はinput要素の背景色（ここでは#fff）にそろえる */
+	box-shadow: 0 0 0px 999px #FFF inset;
+}
+
+/*-------------------------------*/
+/*	placeholder
+/*-------------------------------*/
+input::-webkit-input-placeholder {
+	color: #c9c9c9;
+}
+input::-moz-placeholder {
+	color: #c9c9c9;
+	opacity: 1;
+}
+input:-ms-input-placeholder {
+	color: #c9c9c9;
+}
+
+/*-------------------------------*/
+/*	項目名
+/*-------------------------------*/
+.form_subject { }
+.form_subject_name {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+}
+.form_subject_req {
+	float: right;
+	display: inline-block;
+	color: #fd9500;
+	font-size: 14px;
+}
+.form_subject_flag_req {
+	background: #fd9500;
+}
+
+/*-------------------------------*/
+/*	フォームパーツ
+/*-------------------------------*/
+.form_item {
+	margin: 20px 0;
+}
+
+/*-------------------------------*/
+/*	要素を横に並べる
+/*-------------------------------*/
+.form_inline {
+	vertical-align: middle;
+}
+.form_inline .form_inline_item {
+	display: inline-block;
+}
+.form_inline .form_inline_item:not(:first-child) {
+	margin-left: 5px;
+}
+
+/*-------------------------------*/
+/*	text
+/*-------------------------------*/
+.form_text {
+	border: 1px solid #7d7d7d;
+	border-radius: 3px;
+	padding: 10px;
+	width: 100%;
+}
+.form_text_01 {
+	width: 194px;
+	margin-right: 5px;
+}
+.form_text_02 {
+	width: 150px;
+	margin-right: 5px;
+}
+
+/*-------------------------------*/
+/*	textarea
+/*-------------------------------*/
+.form_textarea {
+	border: 1px solid #7d7d7d;
+	border-radius: 3px;
+	padding: 10px;
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+}
+/*-------------------------------*/
+/*	select
+/*-------------------------------*/
+.form_select_wrap{
+	position: relative;
+}
+.form_select_wrap::before{
+	display: inline-block;
+	font-size: 24px;
+	width: 30px;
+	height: 100%;
+	font-family: fontAwesome;
+	content: "\f0d7";
+	z-index: 1;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	color: #333;
+	pointer-events: none;
+	line-height: 1.4;
+	text-align: center;
+}
+.form_select{
+	border: 1px solid #7d7d7d;
+	border-radius: 3px;
+	padding: 10px 35px 10px 10px;
+	width: 100%;
+}
+
+/*-------------------------------*/
+/*	checkbox
+/*-------------------------------*/
+.form_checkbox{
+	display: none;
+}
+.form_checkbox_parts{
+	padding-left: 25px;
+	position: relative;
+	margin-right: 25px;
+}
+.form_checkbox_parts::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dcdcdc;
+	border-radius: 3px;
+}
+.form_checkbox:checked + .form_checkbox_parts::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: 8px;
+	width: 8px;
+	height: 16px;
+	transform: rotate(40deg);
+	border-bottom: 3px solid #333;
+	border-right: 3px solid #333;
+}
+
+/*-------------------------------*/
+/*	radio
+/*-------------------------------*/
+.form_radio {
+	display: none;
+}
+.form_radio + label{
+	padding-left: 25px;
+	position: relative;
+	margin-right: 25px;
+}
+.form_radio + label::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dcdcdc;
+	border-radius: 50%;
+}
+.form_radio:checked + label::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	background: #333;
+	border-radius: 50%;
+}
+
+/*-------------------------------*/
+/*	button
+/*-------------------------------*/
+.form_btn_wrap {
+	padding: 30px 0;
+	text-align: center;
+}
+.form_btn {
+	display: inline-block;
+	position: relative;
+	background: #CCC;
+	color: #333;
+	border-radius: 5px;
+	padding: 12px 0;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	font-size: 16px;
+	position: relative;
+}
+.form_btn:hover {
+	background: #333;
+	color: #FFF;
+}
+.form_btn span:after {
+	content: '\f101';
+	margin-left: 5px;
+	font-family: 'FontAwesome';
+}
+
+/* オリジナルボタン1 */
+.form_btn_01 {
+	background: #D8E6F6;
+	color: #1d3994;
+}
+.form_btn_01:hover {
+	background: #4f7eb9;
+	color: #FFF;
+}
+
+/* サイズ固定 */
+.form_btn_fix {
+	width: 300px;
+}
+.form_btn_fix_wide {
+	width: 700px;
+}
+
+/*-------------------------------*/
+/*	同意
+/*-------------------------------*/
+.form_consent {
+	margin-top: 10px;
+	/*font-size: 12px;*/
+}
+
+/*-------------------------------*/
+/*	assist
+/*-------------------------------*/
+.form_assist {
+	margin-top: 10px;
+	color: #888;
+	font-size: 14px;
+}
+
+/*-------------------------------*/
+/*	住所自動入力ボタン
+/*-------------------------------*/
+.zip_search {
+	display: inline-block;
+}
+.zip_search a {
+	background: #121d54;
+	border-radius: 5px;
+	color: #FFF;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+.zip_search a:hover {
+	background: #333;
+	color: #FFF;
+}
+/*
+.zip_search a:after {
+	content: '\f0d7';
+	margin-left: 5px;
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	font-weight: normal;
+}
+.zip_search_link {
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+*/
+
+/* ------------------------------------------------------------------
+	1-9. Scrollbar styles
+-------------------------------------------------------------------*/
+.scroll_area_y::-webkit-scrollbar{
+	width: 10px;
+}
+.scroll_area_x::-webkit-scrollbar{
+	height: 10px;
+}
+::-webkit-scrollbar-track{
+	background: #e7e7e7;
+}
+::-webkit-scrollbar-thumb{
+	background: #898989;
+}
+
+/* スクロール範囲の下部に透過グラデを置く場合に必要 */
+.grd_area {
+	position: relative;
+}
+.grd_area::before {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 40px;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+}
+/* ------------------------------------------------------------------
+	1-10. adobe_area styles
+-------------------------------------------------------------------*/
+.adobe_area{
+	text-align: center;
+	width: 670px;
+	margin: 0 auto;
+}
+.adobe_link{
+	font-size: 20px;
+	padding: 10px 0 20px 0;
+}
+
+/* ------------------------------------------------------------------
+	1-99. VisualFormattingModel styles
+-------------------------------------------------------------------*/
+.pc_block{
+	display: block !important;
+}
+.pc_inline{
+	display: inline !important;
+}
+.sp_block{
+	display: none !important;
+}
+.sp_inline{
+	display: none !important;
+}
+.align_left { text-align: left;}
+.align_right { text-align: right;}
+.align_center { text-align: center;}
+
+/* ------------------------------------
+	CLEARFIX
+------------------------------------*/
+.contents_item_type01,.contents_item_type02,
+.section_inr,
+.section_box::after,
+.cf:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+
+
+
+
+/*==================================================================
+	2 Responsive setting
+===================================================================*/
+
+/* ------------------------------------------------------------------
+	2-1. Fluid columns
+-------------------------------------------------------------------*/
+/* 初期設定 */
+.fluid_col > li {
+	float: left;
+	margin-bottom: 2.87%;
+}
+
+.fluid_col_02 > li { width: 48.56%; margin-right: 2.88%;}/* 横並びに等分 */
+.fluid_col_03 > li { width: 31.42%; margin-right: 2.87%;}/* 横並びに3等分 */
+.fluid_col_04 > li { width: 22.84%; margin-right: 2.88%;}/* 横並びに4等分 */
+.fluid_col_05 > li { width: 17.68%; margin-right: 2.9%;}/* 横並びに5等分 */
+.fluid_col_06 > li { width: 14.25%; margin-right: 2.9%;}/* 横並びに6等分 */
+.fluid_col_07 > li { width: 11.8%; margin-right: 2.9%;}/* 横並びに7等分 */
+.fluid_col_08 > li { width: 9.98%; margin-right: 2.88%;}/* 横並びに8等分 */
+.fluid_col_09 > li { width: 8.56%; margin-right: 2.87%;}/* 横並びに9等分 */
+
+.fluid_col_02 > li:nth-child(2n),
+.fluid_col_03 > li:nth-child(3n),
+.fluid_col_04 > li:nth-child(4n),
+.fluid_col_05 > li:nth-child(5n),
+.fluid_col_06 > li:nth-child(6n),
+.fluid_col_07 > li:nth-child(7n),
+.fluid_col_08 > li:nth-child(8n),
+.fluid_col_09 > li:nth-child(9n) {
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================
+	99 SP
+===================================================================*/
+
+@media only screen and (max-width: 640px) {
+/*==================================================================
+	0. BoxModel change
+===================================================================*/
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*==================================================================
+	1. Common setting
+===================================================================*/
+/* ------------------------------------------------------------------
+	1-1. Reset styles
+-------------------------------------------------------------------*/
+img{
+	width: 100%;
+}
+/* ------------------------------------------------------------------
+	1-3. Text styles
+-------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------
+	1-4. Heading styles
+-------------------------------------------------------------------*/
+.heading{
+	font-size: 4vw;
+	margin-bottom: 5%;
+}
+.heading01{
+	font-weight: bold;
+	font-size: 3.125vw;
+	line-height: 1.1;
+	padding-left: 3%;
+	margin: 0 0 6% 3%;
+}
+.heading01 span{
+	font-size: 6.25vw;;
+}
+
+.heading01_sub{
+	font-size: 4.6875vw;
+	margin-bottom: 5%;
+}
+.heading03{
+	font-size: 4.6875vw;
+	border-bottom: solid 2px #0208fb;
+	padding: 0 0 2% 3%;
+	margin-bottom: 5%;
+}
+.heading04{
+	border-left: solid 10px #0208fb;
+	font-size: 4.375vw;
+	padding-left: 3%;
+	margin: 0 0 5% 3%;
+	font-weight: bold;
+}
+/* 番号つきheading */
+.heading04_type02{
+	font-size: 4.68752vw;
+}
+.heading04_type02 .heading04_type02_num{
+	padding: 2.5%;
+}
+.heading04_type02 p{
+	padding-left: 1%;
+}
+
+/* ------------------------------------------------------------------
+	1-5. Button styles
+-------------------------------------------------------------------*/
+.btn_gradation {
+  width: 100%;
+}
+.btn_gradation:hover {
+  background-image: linear-gradient(-90deg, #0b03c7, #010931);
+	color: #fff;
+}
+.btn_gradation_02 {
+  width: 100%;
+}
+.btn_gradation_03 {
+  width: 100%;
+}
+input.btn_gradation {
+	padding: 4% 0;
+}
+.hover_btn_list{
+	padding-bottom: 0;
+}
+.hover_btn{
+	margin: 2% 0;
+}
+.hover_btn_link{
+	display: block;
+	width: 100%;
+	height: auto;
+	background: none;
+}
+.hover_btn img{
+	display: inline;
+}
+
+/* .link_button */
+.link_button_list .link_button{
+	margin: 3% 0;
+}
+.link_button{
+	display: block;
+}
+
+/* 角丸ベーシックタイプ */
+.link_button_01 {
+	font-size: 3vw;
+}
+.link_button_01 .tel_fs{
+	font-size: 6vw;
+	font-weight: bold;
+}
+.link_button_01 .mail_fs{
+	font-size: 5.4vw;
+	font-weight: bold;
+}
+.link_button_01 a{
+	width: 100%;
+	display: block;
+	color: #FFF;
+	position: relative;
+	transition: all 0.5s;
+	line-height: 1.2;
+}
+
+.link_button_01_tel{
+	padding: 6% 5% 6% 20%;
+}
+.link_button_01_mail{
+	padding: 6% 5% 6% 20%;
+}
+
+.link_button_01_tel:before {
+	font-family: FontAwesome;
+	content: "\f098";
+	position: absolute;
+	top: 50%;
+	left: 6%;
+	right: auto;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-weight: normal;
+	font-size: 10vw;
+}
+.link_button_01_mail:before {
+	font-family: FontAwesome;
+	content:"\f0e0";
+	position: absolute;
+	top: 50%;
+	left: 6%;
+	right: auto;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-weight: normal;
+	font-size: 8vw;
+}
+.link_button_01 a:hover {
+	background: #FFF;
+	color: #121d54;
+}
+
+
+/* ------------------------------------------------------------------
+	1-6. pagination styles
+-------------------------------------------------------------------*/
+
+/*wp-pagenavi base*/
+.wp-pagenavi{
+	width: 100%;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	display: inline-block;
+  width: 17.6%;
+	color: #fff;
+	background-color: #bfbfbf;
+  padding: 3% 0;
+	margin: 0 1.5%;
+	white-space: nowrap;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration:none;
+	font-size: 6.25vw;
+}
+.wp-pagenavi .pages{
+	display: none
+}
+.wp-pagenavi a:hover{
+    color:#FFF;
+    background-color: #121d54;
+    }
+.wp-pagenavi span.current{
+	color: #FFF;
+	background-color: #121d54;
+	font-weight: normal;
+}
+
+
+/* ------------------------------------------------------------------
+	1-7. Table styles
+-------------------------------------------------------------------*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+tr{
+	display: block;
+	padding:0;
+	border-bottom: 1px solid #e5e5e5;
+}
+th,td {
+padding: 3%;
+	border: none;
+	width: 100%;
+	display: block;
+}
+.category_box {
+	margin-bottom: 6%;
+	width: 100%;
+}
+.form_wrapper {
+width: 100%;
+}
+
+.th_col2 , .th_col3 , .th_col4 , .th_col5 , .th_col6 , .th_col7 , .th_col8 , .th_col9 , .th_col10{
+	width: 100%;
+}
+
+.table_01 th,
+.table_01 td {
+	border-top:none;
+	padding:3%;
+}
+.table_02 th,
+.table_02 td  {
+	border-bottom: none;
+}
+
+/* 背景色変更 */
+.th_col_bg{
+background: #121d54;
+color: #fff;
+}
+
+
+/* テーブルタイトルの別スタイル */
+.th_col_title{
+	border-left: 8px solid #0208fb;
+	padding-left: 10px;
+}
+
+
+
+/* ------------------------------------------------------------------
+	1-8. Form styles
+-------------------------------------------------------------------*/
+.form_btn_wrap{
+	padding: 8% 3%
+}
+.form_text_01 {
+width: 48%;
+margin-right: 1%;
+}
+.form_btn {
+margin-bottom: 3%;
+}
+.form_btn_fix {
+width: 100%;
+}
+.form_info_finish {
+padding: 5% 0;
+}
+
+/*-------------------------------*/
+/*	項目名
+/*-------------------------------*/
+.form_subject_name {
+font-size: 4.375vw;
+color: #fff;
+}
+.form_subject_req {
+float: none;
+font-size: 3.75vw;
+}
+.form_subject_flag_req {
+}
+
+
+/*-------------------------------*/
+/*	select
+/*-------------------------------*/
+.form_select_wrap{
+	position: relative;
+}
+.form_select_wrap::before{
+	display: inline-block;
+	font-size: 24px;
+	width: 30px;
+	height: 100%;
+	font-family: fontAwesome;
+	content: "\f0d7";
+	z-index: 1;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	color: #333;
+	pointer-events: none;
+	line-height: 1.4;
+	text-align: center;
+}
+.form_select{
+	border: 1px solid #7d7d7d;
+	border-radius: 3px;
+	padding: 10px 35px 10px 10px;
+	width: 100%;
+}
+
+
+/*-------------------------------*/
+/*	text
+/*-------------------------------*/
+.form_text {
+background: #eeeeee;
+}
+
+/*-------------------------------*/
+/*	textarea
+/*-------------------------------*/
+.form_textarea {
+background: #eeeeee;
+}
+/*-------------------------------*/
+/*	select
+/*-------------------------------*/
+.form_select{
+background: #eeeeee;
+}
+
+
+/* ------------------------------------------------------------------
+	1-10. adobe_area styles
+-------------------------------------------------------------------*/
+.adobe_area{
+	text-align: left;
+	width: 100%;
+	font-size: 3.75vw;
+}
+.adobe_area_img{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+.adobe_link{
+	padding: 3% 0 6% 0;
+}
+
+
+/* ------------------------------------------------------------------
+	1-99. VisualFormattingModel styles
+-------------------------------------------------------------------*/
+.pc_block{
+display: none !important;
+}
+.pc_inline{
+display: none !important;
+}
+.sp_block{
+display: block !important;
+}
+.sp_inline{
+display: inline !important;
+}
+
+
+
+
+
+
+
+
+/*==================================================================
+	2 Responsive setting
+===================================================================*/
+
+
+
+
+
+
+}
