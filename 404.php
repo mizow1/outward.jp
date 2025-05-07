@@ -30,7 +30,7 @@ get_header();
 			<div class="section_block">
 				<div class="wrapper">
 					<div class="no_page">
-						<div class="pb_20"><strong class="f30">お探しのページは見つかりません。（Error 404）</strong></div>
+						<div class="pb_20 error404"><strong class="f30">お探しのページは見つかりません。（Error 404）</strong></div>
 						<div class="pb_10">
 							申し訳ございません。<br />アクセスいただいたURLに該当するページが見つかりませんでした。<br />
 							該当のページはアドレスが変更されたか、削除された可能性がございます。
